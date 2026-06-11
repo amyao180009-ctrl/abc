@@ -1078,9 +1078,7 @@ function submitAnswer(qNum) {
   updateStats();
   saveState();
 
-  if (ans.correct) {
-    showToast('🎉 回答正确！', 'success');
-  } else {
+  if (!ans.correct) {
     showToast('❌ 回答错误', 'error');
   }
 }
